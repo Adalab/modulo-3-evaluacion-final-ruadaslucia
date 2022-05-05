@@ -1,5 +1,7 @@
-function NameFilter() {
-  function handleMovieinput() {}
+function NameFilter(props) {
+  function handleMovieInput(event) {
+    props.handleInputUser(event.target.value);
+  }
   return (
     <>
       <input
@@ -7,7 +9,7 @@ function NameFilter() {
         type="text"
         name="movie"
         placeholder="Find a movie"
-        onChange={handleMovieinput}
+        onChange={handleMovieInput}
       />
     </>
   );

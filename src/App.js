@@ -8,26 +8,55 @@ import MovieSceneList from './components/MovieSceneList';
 
 function App() {
   const [dataMovies, setDataMovies] = useState([]);
+  const [filteredMovies, setFilteredMovies] = useState([]);
   const [filterByYear, setFilterByYear] = useState('');
+  const [inputUser, setInputUser] = useState('');
 
   useEffect(() => {
     getApiData().then((dataFromApi) => {
       setDataMovies(dataFromApi);
+      setFilteredMovies(dataFromApi);
     });
   }, []);
-  //filting del valor del select
-  const handleFilterByyear = (value) => {
+
+  useEffect(() => {
+    let filteredMovies = dataMovies;
+
+    if (isNaN(filterByYear) === false) {
+      const filteredByYear = dataMovies.filter(
+        (movie) => movie.year === filterByYear
+      );
+      filteredMovies = [...filteredByYear];
+    }
+
+    filteredMovies = filteredMovies.filter((movie) => {
+      return movie.movieName.toLowerCase().includes(inputUser.toLowerCase());
+    });
+
+    setFilteredMovies([...filteredMovies]);
+  }, [filterByYear, inputUser]);
+
+  //filtro por año
+  //filtro del valor del select
+  const handleFilterByYear = (value) => {
     setFilterByYear(value);
   };
-  //pasar los datos filtrados a MovieSceneList. Filtro de la var se estado del año
-  const moviesFilteredByYear = dataMovies.filter((movie) => {
-    return movie.year === filterByYear;
-  });
+
+  //filtro por nombre
+  const handleInputUser = (event) => {
+    setInputUser(event);
+  };
+
   return (
     <div className="appBody">
       <Header />
-      <Filters handleFilterByyear={handleFilterByyear} />
-      <MovieSceneList movies={dataMovies} />
+      <p>texto del input{inputUser}</p>
+      <Filters
+        handleFilterByYear={handleFilterByYear}
+        handleInputUser={handleInputUser}
+      />
+      <MovieSceneList movies={filteredMovies} />
+
       <Footer />
     </div>
   );

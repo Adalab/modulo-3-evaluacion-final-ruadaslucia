@@ -1,7 +1,7 @@
 import '../styles/_movieSceneItem.scss';
 function MovieSceneItem(props) {
   return (
-    <div className="itemContainer" key="999">
+    <div className="itemContainer">
       <a className="linksStyle" href="adalab.com">
         <img
           className="posterImage"
