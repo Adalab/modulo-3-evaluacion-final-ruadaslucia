@@ -1,12 +1,17 @@
 import '../styles/_movieSceneItem.scss';
-function MovieSceneItem() {
+function MovieSceneItem(props) {
   return (
-    <div className="itemContainer">
-      <a href="">
-        <img className="" alt="Poster Pelicula" title="Poster Pelicula" />
-        <h4>Nombre pelicula</h4>
-        <p>Año de estreno</p>
-        <p>Linea del guión</p>
+    <div className="itemContainer" key="999">
+      <a className="linksStyle" href="adalab.com">
+        <img
+          className="posterImage"
+          src={props.movie.poster}
+          alt={props.movie.movieName}
+          title={props.movie.movieName}
+        />
+        <h4>{props.movie.movieName}</h4>
+        <p>{props.movie.year}</p>
+        <p>{props.movie.fullLine}</p>
       </a>
     </div>
   );
