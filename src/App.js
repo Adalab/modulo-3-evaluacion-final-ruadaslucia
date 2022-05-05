@@ -8,17 +8,25 @@ import MovieSceneList from './components/MovieSceneList';
 
 function App() {
   const [dataMovies, setDataMovies] = useState([]);
+  const [filterByYear, setFilterByYear] = useState('');
 
   useEffect(() => {
     getApiData().then((dataFromApi) => {
       setDataMovies(dataFromApi);
     });
   }, []);
-
+  //filting del valor del select
+  const handleFilterByyear = (value) => {
+    setFilterByYear(value);
+  };
+  //pasar los datos filtrados a MovieSceneList. Filtro de la var se estado del año
+  const moviesFilteredByYear = dataMovies.filter((movie) => {
+    return movie.year === filterByYear;
+  });
   return (
     <div className="appBody">
       <Header />
-      <Filters />
+      <Filters handleFilterByyear={handleFilterByyear} />
       <MovieSceneList movies={dataMovies} />
       <Footer />
     </div>

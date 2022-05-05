@@ -3,6 +3,7 @@ function NameFilter() {
   return (
     <>
       <input
+        className="inputMovie"
         type="text"
         name="movie"
         placeholder="Find a movie"

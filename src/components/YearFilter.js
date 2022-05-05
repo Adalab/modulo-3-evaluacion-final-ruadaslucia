@@ -1,10 +1,13 @@
-function YearFilter() {
-  function handleMovieSelect() {}
+function YearFilter(props) {
+  const handleChangeYear = (event) => {
+    props.handleFilterByyear(event.target.value);
+  };
   return (
     <>
       <label htmlFor="">Año </label>
-      <select name="" id="" onChange={handleMovieSelect}>
+      <select name="" id="" onChange={handleChangeYear}>
         <option value="">All years</option>
+        <option value="1995">1995 </option>
         <option value="1996">1996 </option>
         <option value="1997">1997 </option>
         <option value="1998">1998 </option>
