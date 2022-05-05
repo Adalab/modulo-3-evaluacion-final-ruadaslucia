@@ -1,4 +1,4 @@
-function MovieSceneDetail() {
+function MovieSceneDetail(props) {
   return <></>;
 }
 export default MovieSceneDetail;
