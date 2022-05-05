@@ -1,3 +1,4 @@
+import '../styles/_filterYear.scss';
 import { useEffect, useState } from 'react';
 
 function YearFilter(props) {
@@ -24,13 +25,20 @@ function YearFilter(props) {
   }
 
   return (
-    <>
-      <label htmlFor="">Año </label>
-      <select name="" id="" onChange={handleChangeYear}>
+    <div className="filterYearContainer">
+      <label className="filterYearContainer__label" htmlFor="">
+        Año{' '}
+      </label>
+      <select
+        className="filterYearContainer__selectYear"
+        name=""
+        id=""
+        onChange={handleChangeYear}
+      >
         <option value="">All years</option>
         {optionYears}
       </select>
-    </>
+    </div>
   );
 }
 export default YearFilter;

@@ -50,7 +50,6 @@ function App() {
   return (
     <div className="appBody">
       <Header />
-      <p>texto del input{inputUser}</p>
       <Filters
         handleFilterByYear={handleFilterByYear}
         handleInputUser={handleInputUser}
