@@ -3,9 +3,9 @@ import MovieSceneItem from './MovieSceneItem';
 import '../styles/_movieSceneList.scss';
 
 function MovieSceneList(props) {
-  const movieElements = props.movies.map((movie) => {
+  const movieElements = props.movies.map((movie, index) => {
     return (
-      <li className="movieContainer">
+      <li className="movieContainer" key={index}>
         <MovieSceneItem movie={movie} />
         {/* <MovieSceneDetail movie={movie} /> */}
       </li>
