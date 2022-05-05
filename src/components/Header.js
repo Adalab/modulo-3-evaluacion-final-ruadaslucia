@@ -2,7 +2,7 @@ import '../styles/_header.scss';
 function Header() {
   return (
     <>
-      <h1 className="headerTitle">Wooooow</h1>
+      <h1 className="headerTitle">Wooooow... It's Owen Wilson!!</h1>
     </>
   );
 }
