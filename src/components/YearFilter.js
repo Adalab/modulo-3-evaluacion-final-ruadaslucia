@@ -5,7 +5,7 @@ function YearFilter(props) {
   const [optionYears, setOptionYears] = useState([]);
 
   useEffect(() => {
-    generateOptions(1995, 2022);
+    generateOptions(1995, 2018);
   }, []);
 
   const handleChangeYear = (event) => {

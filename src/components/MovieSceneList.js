@@ -1,5 +1,5 @@
-import MovieSceneItem from './MovieSceneItem';
-//import MovieSceneDetail from './MovieSceneDetail';
+//import MovieSceneItem from './MovieSceneItem';
+import MovieSceneDetail from './MovieSceneDetail';
 import '../styles/_movieSceneList.scss';
 
 function MovieSceneList(props) {
@@ -7,8 +7,8 @@ function MovieSceneList(props) {
     return (
       <section className="itemContainer">
         <li className="movieContainer" key={index}>
-          <MovieSceneItem movie={movie} />
-          {/* <MovieSceneDetail movie={movie} /> */}
+          {/* <MovieSceneItem movie={movie} /> */}
+          <MovieSceneDetail movie={movie} />
         </li>
       </section>
     );

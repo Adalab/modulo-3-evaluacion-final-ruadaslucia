@@ -4,12 +4,12 @@ import YearFilter from './YearFilter';
 
 function Filters(props) {
   return (
-    <section>
+    <div>
       <form className="filtersContainer" action="">
         <NameFilter handleInputUser={props.handleInputUser} />
         <YearFilter handleFilterByYear={props.handleFilterByYear} />
       </form>
-    </section>
+    </div>
   );
 }
 export default Filters;
