@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../styles/_movieSceneItem.scss';
 function MovieSceneItem(props) {
-  const link = JSON.stringify(props.movie);
   return (
     <li className="movieContainer">
       <Link className="linksStyle" to="/detail" state={{ movie: props.movie }}>
