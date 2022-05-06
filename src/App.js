@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import getApiData from './services/Fetch';
 import Header from './components/Header';
 import Filters from './components/Filters';
 import MovieSceneList from './components/MovieSceneList';
+import MovieSceneDetail from './components/MovieSceneDetail';
 
 function App() {
   const [dataMovies, setDataMovies] = useState([]);
@@ -49,13 +51,25 @@ function App() {
   return (
     <div className="appBody">
       <Header />
-      <Filters
-        handleFilterByYear={handleFilterByYear}
-        handleInputUser={handleInputUser}
-      />
-      <div className="listContainer">
-        <MovieSceneList movies={filteredMovies} />
-      </div>
+      <main className="main">
+        <section>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Filters
+                    handleFilterByYear={handleFilterByYear}
+                    handleInputUser={handleInputUser}
+                  />
+                  <MovieSceneList movies={filteredMovies} />
+                </>
+              }
+            />
+            <Route path="/detail" element={<MovieSceneDetail />}></Route>
+          </Routes>
+        </section>
+      </main>
     </div>
   );
 }

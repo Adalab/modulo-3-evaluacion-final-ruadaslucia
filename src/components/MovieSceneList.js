@@ -1,5 +1,4 @@
-//import MovieSceneItem from './MovieSceneItem';
-import MovieSceneDetail from './MovieSceneDetail';
+import MovieSceneItem from './MovieSceneItem';
 import '../styles/_movieSceneList.scss';
 
 function MovieSceneList(props) {
@@ -7,8 +6,7 @@ function MovieSceneList(props) {
     return (
       <section className="itemContainer">
         <li className="movieContainer" key={index}>
-          {/* <MovieSceneItem movie={movie} /> */}
-          <MovieSceneDetail movie={movie} />
+          <MovieSceneItem movie={movie} />
         </li>
       </section>
     );
@@ -21,3 +19,10 @@ function MovieSceneList(props) {
   );
 }
 export default MovieSceneList;
+{
+  /* <li className="footer__menu-item">
+            <NavLink className="footer__menu-link" to="/instructions">
+              ¿Cómo se juega?
+            </NavLink>
+          </li> */
+}
