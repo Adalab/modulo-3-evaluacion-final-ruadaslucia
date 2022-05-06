@@ -3,13 +3,7 @@ import '../styles/_movieSceneList.scss';
 
 function MovieSceneList(props) {
   const movieElements = props.movies.map((movie, index) => {
-    return (
-      <section className="itemContainer">
-        <li className="movieContainer" key={index}>
-          <MovieSceneItem movie={movie} />
-        </li>
-      </section>
-    );
+    return <MovieSceneItem movie={movie} key={index} />;
   });
 
   return (
@@ -19,10 +13,3 @@ function MovieSceneList(props) {
   );
 }
 export default MovieSceneList;
-{
-  /* <li className="footer__menu-item">
-            <NavLink className="footer__menu-link" to="/instructions">
-              ¿Cómo se juega?
-            </NavLink>
-          </li> */
-}

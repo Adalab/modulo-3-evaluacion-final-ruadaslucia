@@ -4,11 +4,9 @@ import YearFilter from './YearFilter';
 
 function Filters(props) {
   return (
-    <div>
-      <form className="filtersContainer" action="">
-        <NameFilter handleInputUser={props.handleInputUser} />
-        <YearFilter handleFilterByYear={props.handleFilterByYear} />
-      </form>
+    <div className="filtersContainer">
+      <NameFilter handleInputUser={props.handleInputUser} />
+      <YearFilter handleFilterByYear={props.handleFilterByYear} />
     </div>
   );
 }

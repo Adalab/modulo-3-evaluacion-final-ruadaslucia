@@ -1,19 +1,22 @@
+import { useLocation } from 'react-router-dom';
 import '../styles/_movieSceneDetail.scss';
 function MovieSceneDetail(props) {
+  const location = useLocation();
+  const movie = location.state.movie;
   return (
     <div>
       <nav className="detailContainer" to="/detail">
-        <a className="linksStyleDetail" href={props.movie.audio} target="blank">
+        <a className="linksStyleDetail" href={movie.audio} target="blank">
           <img
             className="posterImageDetail"
-            src={props.movie.poster}
-            alt={props.movie.movieName}
-            title={props.movie.movieName}
+            src={movie.poster}
+            alt={movie.movieName}
+            title={movie.movieName}
           />
           <div className="detailContent">
-            <h4>Movie: {props.movie.movieName}</h4>
-            <p className="textLineDetail">Line: {props.movie.fullLine}</p>
-            <p>Director: {props.movie.director}</p>
+            <h4>Movie: {movie.movieName}</h4>
+            <p className="textLineDetail">Line: {movie.fullLine}</p>
+            <p>Director: {movie.director}</p>
             <p className="audioText">Click and listen to the audio</p>
           </div>
         </a>

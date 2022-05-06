@@ -9,7 +9,7 @@ function NameFilter(props) {
         className="inputMovie__name"
         type="text"
         name="movie"
-        placeholder="Find a woww.."
+        placeholder="Find a movie"
         onChange={handleMovieInput}
       />
     </form>
