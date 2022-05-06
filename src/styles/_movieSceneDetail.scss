@@ -1,5 +1,5 @@
 .detailContainer {
-  width: auto;
+  width: 700px;
   height: auto;
   border: solid 5px crimson;
   border-radius: 20px;
@@ -7,13 +7,15 @@
   margin: 5px;
   color: grey;
   overflow: hidden;
+  text-decoration: none;
+  list-style: none;
 }
 .linksStyleDetail {
-  text-decoration: none;
   color: crimson;
   font-weight: bold;
   display: flex;
   flex-direction: row;
+  text-decoration: none;
 }
 .posterImageDetail {
   margin: 10px;
@@ -26,12 +28,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  text-align: left;
+
   margin-left: 10px;
-}
-.textLineDetail {
-  margin: 5px;
-}
-.audioText {
-  margin-left: 5px;
-  margin-right: 5px;
 }

@@ -10,10 +10,10 @@ function MovieSceneDetail(props) {
           title={props.movie.movieName}
         />
         <div className="detailContent">
-          <h4>{props.movie.movieName}</h4>
-          <p className="textLineDetail">{props.movie.fullLine}</p>
+          <h4>Movie: {props.movie.movieName}</h4>
+          <p className="textLineDetail">Line: {props.movie.fullLine}</p>
           <p>Director: {props.movie.director}</p>
-          <p className="audioText">Click para escuchar el audio</p>
+          <p className="audioText">Click and listen to the audio</p>
         </div>
       </a>
     </div>
