@@ -54,8 +54,9 @@ function App() {
         handleFilterByYear={handleFilterByYear}
         handleInputUser={handleInputUser}
       />
-      <MovieSceneList movies={filteredMovies} />
-
+      <div className="listContainer">
+        <MovieSceneList movies={filteredMovies} />
+      </div>
       <Footer />
     </div>
   );

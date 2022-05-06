@@ -1,7 +1,6 @@
 import '../styles/_filterName.scss';
 function NameFilter(props) {
   function handleMovieInput(event) {
-    event.preventDeault();
     props.handleInputUser(event.target.value);
   }
   return (
@@ -10,7 +9,7 @@ function NameFilter(props) {
         className="inputMovie__name"
         type="text"
         name="movie"
-        placeholder="Find a movie"
+        placeholder="Find a woww.."
         onChange={handleMovieInput}
       />
     </form>

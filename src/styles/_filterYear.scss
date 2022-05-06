@@ -2,6 +2,7 @@
   &__label {
     margin-right: 5px;
     margin-left: 50px;
+    margin-bottom: 5px;
     color: rgb(220, 20, 60);
     font-weight: bold;
   }
@@ -11,5 +12,7 @@
     background-color: rgba(220, 20, 60, 0.39);
     border: none;
     border-radius: 5px;
+    color: crimson;
+    font-size: large;
   }
 }

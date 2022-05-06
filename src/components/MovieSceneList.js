@@ -5,10 +5,12 @@ import '../styles/_movieSceneList.scss';
 function MovieSceneList(props) {
   const movieElements = props.movies.map((movie, index) => {
     return (
-      <li className="movieContainer" key={index}>
-        <MovieSceneItem movie={movie} />
-        {/* <MovieSceneDetail movie={movie} /> */}
-      </li>
+      <section className="itemContainer">
+        <li className="movieContainer" key={index}>
+          <MovieSceneItem movie={movie} />
+          {/* <MovieSceneDetail movie={movie} /> */}
+        </li>
+      </section>
     );
   });
 

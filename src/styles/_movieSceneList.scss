@@ -1,7 +1,13 @@
 .movieContainer {
-  list-style: none;
-  width: 250px;
 }
-.movieCard {
-  width: 200px;
+// .movieCard {
+//   width: 200px;
+// }
+.listContainer {
+  height: fit-content;
+  border: solid crimson 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
