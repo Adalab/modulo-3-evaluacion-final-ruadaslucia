@@ -10,9 +10,11 @@ function MovieSceneItem(props) {
           alt={props.movie.movieName}
           title={props.movie.movieName}
         />
-        <h4>{props.movie.movieName}</h4>
-        <p className="textLine">{props.movie.fullLine}</p>
-        <p>{props.movie.year}</p>
+        <div className="textMovieItem">
+          <h4>{props.movie.movieName}</h4>
+          <p className="textLine">{props.movie.fullLine}</p>
+          <p>{props.movie.year}</p>
+        </div>
       </Link>
     </li>
   );

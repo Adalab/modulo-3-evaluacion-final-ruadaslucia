@@ -27,7 +27,7 @@ function YearFilter(props) {
   return (
     <div className="filterYearContainer">
       <label className="filterYearContainer__label" htmlFor="">
-        Año{' '}
+        Chose a year{' '}
       </label>
       <select
         className="filterYearContainer__selectYear"

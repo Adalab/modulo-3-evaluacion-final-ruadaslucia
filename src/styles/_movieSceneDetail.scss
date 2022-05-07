@@ -1,26 +1,31 @@
+.containerPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .detailContainer {
-  width: 400px;
-  height: auto;
+  width: 270px;
+  height: 520px;
   border: solid 5px crimson;
   border-radius: 20px;
-  background-color: hsl(0, 0%, 100%);
-  margin: 5px;
-  color: grey;
-  overflow: hidden;
-  text-decoration: none;
-  list-style: none;
+  background-color: rgb(255, 255, 255);
+  margin: 10px;
 }
 .linksStyleDetail {
   color: crimson;
+  font-size: 16px;
   font-weight: bold;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   text-decoration: none;
+  margin-bottom: 15px;
+  align-items: center;
 }
 .posterImageDetail {
   margin: 10px;
-  width: auto;
-  height: 200px;
+  width: 180px;
+  height: 250px;
   border-radius: 20px;
 }
 .detailContent {
@@ -29,6 +34,38 @@
   justify-content: center;
   align-items: flex-start;
   text-align: left;
-
-  margin-left: 10px;
+  margin-left: 15px;
+  margin-right: 5px;
+}
+@media (min-width: 768px) {
+  .containerPage {
+    display: flex;
+    flex-direction: row;
+  }
+  .detailContainer {
+    width: 440px;
+    height: 850px;
+  }
+  .linksStyleDetail {
+    font-size: 26px;
+  }
+  .posterImageDetail {
+    margin-top: 20px;
+    width: 300px;
+    height: 430px;
+  }
+  .detailContent {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .detailContainer {
+    width: 480px;
+    height: 890px;
+  }
+  .detailContent {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
 }

@@ -4,7 +4,7 @@ function MovieSceneDetail(props) {
   const location = useLocation();
   const movie = location.state.movie;
   return (
-    <div>
+    <div className="containerPage">
       <nav className="detailContainer" to="/detail">
         <a className="linksStyleDetail" href={movie.audio} target="blank">
           <img

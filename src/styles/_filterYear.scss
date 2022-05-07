@@ -1,8 +1,10 @@
 .filterYearContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   &__label {
     margin-right: 5px;
-    margin-left: 50px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     color: rgb(220, 20, 60);
     font-weight: bold;
   }
@@ -15,4 +17,6 @@
     color: crimson;
     font-size: large;
   }
+}
+@media (min-width: 768px) {
 }
