@@ -10,7 +10,7 @@ import MovieSceneDetail from './components/MovieSceneDetail';
 function App() {
   const [dataMovies, setDataMovies] = useState([]);
   const [filteredMovies, setFilteredMovies] = useState([]);
-  const [filterByYear, setFilterByYear] = useState('');
+  const [filterByYear, setFilterByYear] = useState('all');
   const [inputUser, setInputUser] = useState('');
 
   useEffect(() => {
@@ -21,7 +21,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    let filteredMovies = dataMovies;
+    let filteredMovies = [...dataMovies];
 
     if (isNaN(filterByYear) === false) {
       const filteredByYear = dataMovies.filter(

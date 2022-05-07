@@ -35,7 +35,7 @@ function YearFilter(props) {
         id=""
         onChange={handleChangeYear}
       >
-        <option value="">All years</option>
+        <option value="all">All years</option>
         {optionYears}
       </select>
     </div>
