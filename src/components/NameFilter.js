@@ -1,6 +1,7 @@
 import '../styles/_filterName.scss';
 function NameFilter(props) {
   function handleMovieInput(event) {
+    event.preventDefault();
     props.handleInputUser(event.target.value);
   }
   return (

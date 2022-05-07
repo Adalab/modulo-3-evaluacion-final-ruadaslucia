@@ -34,16 +34,13 @@ function App() {
       return movie.movieName.toLowerCase().includes(inputUser.toLowerCase());
     });
 
+    //filtros
     setFilteredMovies([...filteredMovies]);
   }, [filterByYear, inputUser]);
 
-  //filtro por año
-  //filtro del valor del select
   const handleFilterByYear = (value) => {
     setFilterByYear(value);
   };
-
-  //filtro por nombre
   const handleInputUser = (event) => {
     setInputUser(event);
   };

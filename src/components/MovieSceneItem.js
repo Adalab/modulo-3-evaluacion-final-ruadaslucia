@@ -11,8 +11,8 @@ function MovieSceneItem(props) {
           title={props.movie.movieName}
         />
         <h4>{props.movie.movieName}</h4>
-        <p>{props.movie.year}</p>
         <p className="textLine">{props.movie.fullLine}</p>
+        <p>{props.movie.year}</p>
       </Link>
     </li>
   );
