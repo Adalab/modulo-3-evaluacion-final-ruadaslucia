@@ -24,8 +24,24 @@
   font-size: large;
 }
 @media (min-width: 768px) {
-  &__name {
-    height: 30px;
-    width: 400px;
+  .inputMovie {
+    &__text {
+      font-size: 20px;
+    }
+    &__name {
+      height: 40px;
+      width: 300px;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .inputMovie {
+    &__text {
+      font-size: 25px;
+    }
+    &__name {
+      height: 60px;
+      width: 400px;
+    }
   }
 }

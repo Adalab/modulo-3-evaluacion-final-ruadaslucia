@@ -19,4 +19,24 @@
   }
 }
 @media (min-width: 768px) {
+  .filterYearContainer {
+    &__label {
+      font-size: 20px;
+    }
+    &__selectYear {
+      height: 40px;
+      width: 300px;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .filterYearContainer {
+    &__label {
+      font-size: 25px;
+    }
+    &__selectYear {
+      height: 60px;
+      width: 400px;
+    }
+  }
 }

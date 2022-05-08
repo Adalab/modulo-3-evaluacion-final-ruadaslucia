@@ -34,7 +34,6 @@ function App() {
       return movie.movieName.toLowerCase().includes(inputUser.toLowerCase());
     });
 
-    //filtros
     setFilteredMovies([...filteredMovies]);
   }, [filterByYear, inputUser]);
 
