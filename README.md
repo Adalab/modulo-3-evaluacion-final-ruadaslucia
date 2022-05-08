@@ -20,7 +20,7 @@ actor Owen Wilson ha dicho 'wow'.
 
 ### Contendrá:
 
-##### La aplicacion contará con un espacio con un formulario donde:
+##### La aplicación contará con un espacio con un formulario donde:
 
 - Filtrar por escena a medida que de introduzcan letras y coincidan con titulos de las películas.
 - Un segundo espacio de selección que devuelva las escenas de las películas que se estrenaron por el año seleccionado.
